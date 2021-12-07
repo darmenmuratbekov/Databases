@@ -65,7 +65,7 @@ begin
 end
 $$;
 
-select is_valid_password('Azimbek1@');
+select is_valid_password('Darmen@');
 
 --e
 create or replace function one_to_two(s varchar(30))
@@ -82,7 +82,7 @@ begin
 end;
 $$;
 
-select one_to_two('Azimbek Abdipattaev');
+select one_to_two('Muratbekov Darmen');
 
 -- Task 2
 
@@ -143,7 +143,7 @@ drop trigger age_from_year on people;
 create trigger age_from_year before insert or update on people
     for each row execute procedure age_calculate();
 
-insert into people(name, birth_year) values ('Azimbek', 2002);
+insert into people(name, birth_year) values ('Darmen', 2002);
 insert into people(name, birth_year) values ('Bob', 2010);
 insert into people(name, birth_year) values ('Alice', 2020);
 
